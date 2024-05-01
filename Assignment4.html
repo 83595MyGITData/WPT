@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <center>
+
+        <table>
+            <tr>
+                <td><br><br></td>
+            </tr>
+            <tr>
+                <td colspan="2">Enter Number 1</td>
+                <td colspan="2"><input type="number" id="num1"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">Enter Number 2</td>
+                <td colspan="2"><input type="number" id="num2"></td>
+                
+            </tr>
+            <tr>
+                <td colspan="2">Result</td>
+                <td colspan="2"><input type="number" id="res"></td>
+                
+            </tr>
+            <tr>
+                <td><br><br></td>
+            </tr>
+            
+            <tr>
+                <td><input type="button" value="Addition" id="addbtn" onclick="addition()"></td>
+                <td><input type="button" value="Subtraction" id="subbtn" onclick="subtraction()"></td>
+                <td><input type="button" value="Multiplication" id="mulbtn" onclick="multiplication()"></td>
+                <td><input type="button" value="Division" id="divbtn" ondblclick="division()"></td>
+                <td><input type="button" value="Clear Data" id="clearbtn" ondblclick="clear1()"></td>
+
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+       
+       
+    </center>
+    
+    <script>
+        function clear1()
+        {
+            var refToNum1=document.getElementById("num1");
+            var refToNum2=document.getElementById("num2");
+            var refToRes=document.getElementById("res");
+
+            refToNum1.value="";
+            refToNum2.value="";
+            refToRes.value="";
+
+
+        }
+        function addition()
+        {
+            var refToNum1=document.getElementById("num1");
+            var refToNum2=document.getElementById("num2");
+            var refToRes=document.getElementById("res");
+
+           // console.log(refToNum1.value);
+            //console.log(refToNum2.value);
+
+
+            var res=(parseInt(refToNum1.value) + parseInt( refToNum2.value));
+            refToRes.value = res;
+
+
+        }
+        function subtraction()
+        {
+            var refToNum1=document.getElementById("num1");
+            var refToNum2=document.getElementById("num2");
+            var refToRes=document.getElementById("res");
+
+           // console.log(refToNum1.value);
+            //console.log(refToNum2.value);
+
+
+            var res=(refToNum1.value) - ( refToNum2.value);
+            refToRes.value = res;
+
+        }
+        function multiplication()
+        {
+            var refToNum1=document.getElementById("num1");
+            var refToNum2=document.getElementById("num2");
+            var refToRes=document.getElementById("res");
+
+           // console.log(refToNum1.value);
+            //console.log(refToNum2.value);
+
+
+            var res=(refToNum1.value) * ( refToNum2.value);
+            refToRes.value = res;
+
+
+        }
+        function division()
+        {
+            var refToNum1=document.getElementById("num1");
+            var refToNum2=document.getElementById("num2");
+            var refToRes=document.getElementById("res");
+
+           // console.log(refToNum1.value);
+            //console.log(refToNum2.value);
+
+
+            var res=(refToNum1.value) / ( refToNum2.value);
+            refToRes.value = res;
+
+
+        }
+         </script>
+</body>
+</html>
