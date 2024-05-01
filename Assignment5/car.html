@@ -1,0 +1,101 @@
+
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+            <img src="cycle.jpeg" id="cycle">
+
+    </div>
+
+    <div style ="
+            position: absolute;
+            top: 1;
+            left: 877px;">
+        <img src="" id="">
+
+</div>
+    
+
+    <div
+    
+    style ="width: 800px;background-color: black;height: 50px;
+    position: absolute;
+    top:175px;
+    left:0px
+    ">
+    <br> <br> <br> <br>
+<table>
+   
+    <tr>
+        <td>Xaxis: <input type="text" id="xaxis"></td>
+        
+    </tr>  
+    <tr>
+        <td>Yaxis: <input type="text" id ="yaxis"></td>
+    </tr>
+    <tr>
+        <td><br></td>
+    </tr>
+    <tr>
+    
+    <td> <input  style="width: 30%;" type="button" value="Start" onclick="start()">
+        <input style="width:30%;" type="button" value="Stop" onclick="Stop()">
+   </td></tr>
+
+
+</table>
+        
+</div>
+
+
+    <script>
+        var count = 0;
+        var counttop = 0;
+        var queue = new Array();
+        var getidofCycle=document.getElementById("cycle");
+
+        function start(){
+        
+
+           var queueno= window.setInterval(counter,100);
+           queue.push(queueno);
+           console.log(queueno);
+        
+        }
+        function Stop() {
+
+        var queueNo = queue.pop();
+        window.clearInterval(queueNo);
+        console.log("Q Destroyed with No " + queueNo);
+
+      }
+      var refToxaxis=document.getElementById("xaxis");
+
+        function counter()
+        {
+            count=count+1;
+            console.log(count);
+            if(count < 765){
+            getidofCycle.style.marginLeft = count + "px";
+
+            refToxaxis.value=count + "px";
+             }
+
+            else if(count>766 && counttop<720)
+            {
+                var refToyaxis=document.getElementById("yaxis");
+                
+                counttop=counttop+1;
+                getidofCycle.style.marginTop = counttop + "px"; 
+                refToyaxis.value=counttop + "px";
+
+            }
+        }
+    
+       
+    </script>
+</body>
+</html>
